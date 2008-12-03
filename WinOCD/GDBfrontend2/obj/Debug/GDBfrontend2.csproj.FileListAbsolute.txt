@@ -1,0 +1,28 @@
+C:\Dokumente und Einstellungen\Tobi\Eigene Dateien\Visual Studio 2008\Projects\GDBfrontend2\GDBfrontend2\bin\Debug\GDBfrontend2.exe
+C:\Dokumente und Einstellungen\Tobi\Eigene Dateien\Visual Studio 2008\Projects\GDBfrontend2\GDBfrontend2\bin\Debug\GDBfrontend2.pdb
+C:\Dokumente und Einstellungen\Tobi\Eigene Dateien\Visual Studio 2008\Projects\GDBfrontend2\GDBfrontend2\bin\Debug\Alsing.SyntaxBox.dll
+C:\Dokumente und Einstellungen\Tobi\Eigene Dateien\Visual Studio 2008\Projects\GDBfrontend2\GDBfrontend2\obj\Debug\ResolveAssemblyReference.cache
+C:\Dokumente und Einstellungen\Tobi\Eigene Dateien\Visual Studio 2008\Projects\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.Form1.resources
+C:\Dokumente und Einstellungen\Tobi\Eigene Dateien\Visual Studio 2008\Projects\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.Properties.Resources.resources
+C:\Dokumente und Einstellungen\Tobi\Eigene Dateien\Visual Studio 2008\Projects\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend2.csproj.GenerateResource.Cache
+C:\Dokumente und Einstellungen\Tobi\Eigene Dateien\Visual Studio 2008\Projects\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend2.exe
+C:\Dokumente und Einstellungen\Tobi\Eigene Dateien\Visual Studio 2008\Projects\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend2.pdb
+C:\Dokumente und Einstellungen\Tobi\Eigene Dateien\Visual Studio 2008\Projects\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.controls.OpenOCDstatusControl.resources
+C:\Dokumente und Einstellungen\Tobi\Eigene Dateien\Visual Studio 2008\Projects\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.controls.OpenOCDconfigControl.resources
+C:\Dokumente und Einstellungen\Tobi\Eigene Dateien\Visual Studio 2008\Projects\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.gdb.GDBstatusControl.resources
+C:\Dokumente und Einstellungen\Tobi\Eigene Dateien\Visual Studio 2008\Projects\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.SyntaxEditor.SyntaxEditorControl.resources
+C:\Dokumente und Einstellungen\Tobi\Eigene Dateien\Visual Studio 2008\Projects\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.gdb.variableObjects.VarDisplay.resources
+D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend2.exe
+D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend2.pdb
+D:\Tobias\GDBfrontend2\GDBfrontend2\bin\Debug\GDBfrontend2.exe
+D:\Tobias\GDBfrontend2\GDBfrontend2\bin\Debug\GDBfrontend2.pdb
+D:\Tobias\GDBfrontend2\GDBfrontend2\bin\Debug\Alsing.SyntaxBox.dll
+D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\ResolveAssemblyReference.cache
+D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.gdb.GDBstatusControl.resources
+D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.gdb.variableObjects.VarDisplay.resources
+D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.controls.OpenOCDconfigControl.resources
+D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.controls.OpenOCDstatusControl.resources
+D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.Form1.resources
+D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.Properties.Resources.resources
+D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.SyntaxEditor.SyntaxEditorControl.resources
+D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend2.csproj.GenerateResource.Cache

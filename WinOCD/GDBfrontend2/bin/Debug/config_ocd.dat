@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<openOCDConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <loaded>true</loaded>
+  <OCDexePath>C:\Program Files\openocd-r717\bin\openocd-ftd2xx.exe</OCDexePath>
+  <OCDcfgPath>D:\Tobias\GDBfrontend2\GDBfrontend2\bin\Debug\openocd.cfg</OCDcfgPath>
+  <OCDcfgFlashPath>D:\Tobias\GDBfrontend2\GDBfrontend2\bin\Debug\openocd.cfg</OCDcfgFlashPath>
+</openOCDConfig>
