@@ -168,7 +168,15 @@ namespace GDB_Frontend.Processes
        
         public bool HasExited
         {
-            get { return my_proc.HasExited; }  
+            get {
+
+                if (my_proc != null)
+                {
+                    return my_proc.HasExited;
+                }
+                else return true;
+            
+            }  
         }
 
         private void onExit(object sender, EventArgs e)
