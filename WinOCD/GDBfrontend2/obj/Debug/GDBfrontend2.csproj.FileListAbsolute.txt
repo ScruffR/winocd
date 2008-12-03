@@ -26,3 +26,17 @@ D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.Form1.resources
 D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.Properties.Resources.resources
 D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend.SyntaxEditor.SyntaxEditorControl.resources
 D:\Tobias\GDBfrontend2\GDBfrontend2\obj\Debug\GDBfrontend2.csproj.GenerateResource.Cache
+C:\studienarbeit\WinOCD\GDBfrontend2\obj\Debug\GDBfrontend2.exe
+C:\studienarbeit\WinOCD\GDBfrontend2\obj\Debug\GDBfrontend2.pdb
+C:\studienarbeit\WinOCD\GDBfrontend2\bin\Debug\GDBfrontend2.exe
+C:\studienarbeit\WinOCD\GDBfrontend2\bin\Debug\GDBfrontend2.pdb
+C:\studienarbeit\WinOCD\GDBfrontend2\bin\Debug\Alsing.SyntaxBox.dll
+C:\studienarbeit\WinOCD\GDBfrontend2\obj\Debug\ResolveAssemblyReference.cache
+C:\studienarbeit\WinOCD\GDBfrontend2\obj\Debug\GDBfrontend.gdb.GDBstatusControl.resources
+C:\studienarbeit\WinOCD\GDBfrontend2\obj\Debug\GDBfrontend.gdb.variableObjects.VarDisplay.resources
+C:\studienarbeit\WinOCD\GDBfrontend2\obj\Debug\GDBfrontend.controls.OpenOCDconfigControl.resources
+C:\studienarbeit\WinOCD\GDBfrontend2\obj\Debug\GDBfrontend.controls.OpenOCDstatusControl.resources
+C:\studienarbeit\WinOCD\GDBfrontend2\obj\Debug\GDBfrontend.Form1.resources
+C:\studienarbeit\WinOCD\GDBfrontend2\obj\Debug\GDBfrontend.Properties.Resources.resources
+C:\studienarbeit\WinOCD\GDBfrontend2\obj\Debug\GDBfrontend.SyntaxEditor.SyntaxEditorControl.resources
+C:\studienarbeit\WinOCD\GDBfrontend2\obj\Debug\GDBfrontend2.csproj.GenerateResource.Cache

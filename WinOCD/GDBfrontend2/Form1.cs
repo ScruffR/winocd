@@ -31,9 +31,13 @@ namespace GDBfrontend
             openOCDstatusControl1.InitControl(OpenOCDinstance);
             gdBstatusControl1.InitControl(GDBinstance);
             syntaxEditorControl1.InitControl(GDBinstance);
-
-           OpenOCDinstance.RunOpenOCD(openOCDconfig1.cfg, false);
+            try
+            {
+                OpenOCDinstance.RunOpenOCD(openOCDconfig1.cfg, false);
+            }
+            catch { MessageBox.Show("Cannot open OpenOCD. Paths ok?","Error",MessageBoxButtons.OK,MessageBoxIcon.Exclamation); }
             GDBinstance.RunGDB(new GDBConfig("--interpreter=mi -silent", "arm-elf-gdb.exe"));
+       
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
