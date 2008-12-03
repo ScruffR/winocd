@@ -1,0 +1,31 @@
+
+bin/test.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00003204  00100000  00100000  00008000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          00000004  00200000  00103204  00010000  2**2
+                  ALLOC
+  2 .comment      000000d8  00000000  00000000  0000b204  2**0
+                  CONTENTS, READONLY
+  3 .debug_aranges 000002c8  00000000  00000000  0000b2e0  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 0000020b  00000000  00000000  0000b5a8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00002490  00000000  00000000  0000b7b3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000ac8  00000000  00000000  0000dc43  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00001229  00000000  00000000  0000e70b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000500  00000000  00000000  0000f934  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000009dd  00000000  00000000  0000fe34  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000008a1  00000000  00000000  00010811  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .ARM.attributes 00000010  00000000  00000000  000110b2  2**0
+                  CONTENTS, READONLY
+ 12 .debug_ranges 00000088  00000000  00000000  000110c8  2**3
+                  CONTENTS, READONLY, DEBUGGING

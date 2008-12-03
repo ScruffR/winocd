@@ -1,0 +1,55 @@
+SetupName: "ARM ELF" (+ Button in DevCpp bei Compiler Settings)
+
+Directories:
+Binaries: yagarto\bin
+
+Libs: 
+yagarto\arm-elf\lib 
+yagarto\lib\gcc\arm-elf\4.2.x
+
+Includes: 
+yagarto\arm-elf\include 
+yagarto\include
+
+c++: 
+yagarto\includes
+
+Programme:
+gcc: arm-elf-gcc.exe
+g++: arm-elf-g++.exe
+make: c:\programme\yagarto-tools-20070303\bin\make.exe
+gdb: arm-elf-gdb.exe
+
+
+
+Bei einem neuen Projekt:
+
+In den Projektoptionen unter "Parameter":
+Compiler:
+-ggdb -O3 -mcpu=arm7tdmi
+
+Linker:
+-Tcommon/linking/mem.ld -lm -lc -lgcc -nostartfiles -g3 -nostdlib
+
++ event. in den Projekt Optionen den Compiler auf "ARM ELF" umstellen.
+- Unter Tools->EnviromentOptions : "Auto close after Compile" aktivieren
+
+
+
+
+---------------------------------------- Nur fürs Debuggen mit insight
+
+INSIGHT CONFIGURATION:
+Unter File->TargetSettings REMOTE-TCP auswählen und folgendes eintragen:
+HOST: localhost
+PORT: 2331
+
+Bei Advanced:
+Download Programm: Hacken wegnehmen
+Run Method: Run
+
+Command der ausgeführt werden soll:
+"source gdbinit.txt"
+
+Per Hand in Main c einen breakpoint setzen...(muss nur einmal gemacht werden)
+

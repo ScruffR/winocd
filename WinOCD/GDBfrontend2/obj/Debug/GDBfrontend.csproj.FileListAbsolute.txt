@@ -1,0 +1,8 @@
+C:\Dokumente und Einstellungen\Tobi\Lokale Einstellungen\Anwendungsdaten\Temporary Projects\GDBfrontend\bin\Debug\GDBfrontend.exe
+C:\Dokumente und Einstellungen\Tobi\Lokale Einstellungen\Anwendungsdaten\Temporary Projects\GDBfrontend\bin\Debug\GDBfrontend.pdb
+C:\Dokumente und Einstellungen\Tobi\Lokale Einstellungen\Anwendungsdaten\Temporary Projects\GDBfrontend\obj\Debug\ResolveAssemblyReference.cache
+C:\Dokumente und Einstellungen\Tobi\Lokale Einstellungen\Anwendungsdaten\Temporary Projects\GDBfrontend\obj\Debug\GDBfrontend.Form1.resources
+C:\Dokumente und Einstellungen\Tobi\Lokale Einstellungen\Anwendungsdaten\Temporary Projects\GDBfrontend\obj\Debug\GDBfrontend.Properties.Resources.resources
+C:\Dokumente und Einstellungen\Tobi\Lokale Einstellungen\Anwendungsdaten\Temporary Projects\GDBfrontend\obj\Debug\GDBfrontend.csproj.GenerateResource.Cache
+C:\Dokumente und Einstellungen\Tobi\Lokale Einstellungen\Anwendungsdaten\Temporary Projects\GDBfrontend\obj\Debug\GDBfrontend.exe
+C:\Dokumente und Einstellungen\Tobi\Lokale Einstellungen\Anwendungsdaten\Temporary Projects\GDBfrontend\obj\Debug\GDBfrontend.pdb

@@ -1,0 +1,10 @@
+FreeRTOS Installation
+
+1.) Alle Dateien dem Projekt hinzufügen. Dabei eine Datei aus MemMang auswählen und aus einem DemoProjekt eine FreeRTOSConfig.h auswählen.
+
+2.) in portable.h eine portmacro datei auswählen, am einfachsten durch hinzufügen von "#define SAM7_GCC"
+
+3.) In port.c ist in der fkt prvSetupTimerInterrupt ein Fehler (im Auslieferungszustand), es fehlt beim Aufruf von AT91F_AIC_ConfigureIt das erste Pointer Argument "AT91C_BASE_AIC,...."
+-> hinzufügen
+
+3.) im startup assembler code den SWI Vektor auf "vPortYieldProcessor" setzen

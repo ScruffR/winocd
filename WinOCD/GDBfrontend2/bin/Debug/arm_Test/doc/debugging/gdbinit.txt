@@ -1,0 +1,20 @@
+
+monitor reset
+
+monitor long 0xffffff60 0x00320100
+monitor long 0xfffffd44 0xa0008000
+monitor long 0xfffffc20 0xa0000601
+monitor sleep 200
+monitor long 0xfffffc2c 0x00480a0e
+monitor sleep 200
+monitor long 0xfffffc30 0x7
+monitor sleep 200
+set remote memory-write-packet-size 1024
+set remote memory-write-packet-size fixed
+set remote memory-read-packet-size 1024
+set remote memory-read-packet-size fixed
+
+monitor sleep 200
+monitor speed auto
+#break main.c:main
+#continue

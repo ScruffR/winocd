@@ -1,0 +1,91 @@
+\documentclass{scrartcl}
+\usepackage[latin1]{inputenc}
+\usepackage{framed}
+
+
+\begin{document}
+
+\begin{center}
+\LARGE{Molch Kommunikation\linebreak} \large{Stand: 20.Mai.2008}
+\end{center}
+
+
+\scriptsize
+\section{Kommunikation Modes}
+Es wird zwischen 3 verschiedenen Kommunikationsmodes unterschieden.\\
+\begin{enumerate}
+	\item Mode Idle \\In diesem Mode wartet der ARM auf ein 2 Byte Kommando vom PIC Prozessor.
+	\item Mode Pipe \\In diesem Mode führt der ARM Signalberechnungen durch, schreib jede Sekunde 1KB an Ergebnissen auf die SD-Karte. In diesen 1KB sind auch 17 Byte Sensor-Daten des PICs enthalten, die dieser sekündlich nach dem Empfang des Alive Bytes [0x5A] zum ARM schickt.
+	\item Mode USB  \\In diesem Mode hat der ARM vom PC über die USB Schnittstelle 32KB Daten erhalten und zum PIC durchgeleitet, der wartet dann auf die 130 Byte Antwort des PIC und sendet diese weiter zum PC. Danach kehrt der ARM automatisch in den Modus IDLE zurück.
+\end{enumerate}
+
+\section{Serielle Kommunikation zwischen ARM \& PIC }
+\subsection{2 Byte Kommandos im Idle Mode (PIC $\rightarrow$ ARM)}
+\begin{itemize}
+	\item START [0x827D]\\Der ARM antwortet mit einem ECHO des Befehls und wechselt dann in den Mode Pipe.
+	\item CONTIN [0x837C]\\Der ARM antwortet mit einem ECHO des Befehls und wechselt dann in den Mode Pipe. Die Aufzeichnung wird an der Position auf der SD-Karte fortgesetzt, die in der Settings.dat Datei bei jedem Stop Kommando abgelegt wird.
+\end{itemize}
+
+\subsection{17 Byte Kommandos im Pipe Mode (PIC $\rightarrow$ ARM)}
+Diese Kommandos werden sekündlich vom PIC gesendet, wenn sich der ARM im Pipe-Modus befindet. Jede Sekunde erhält der ARM 17 Byte vom PIC, wovon die ersten zwei Bytes den Befehl festlegen und die übrigen 15 Bytes Platz für (Sensor)Daten bieten.
+\begin{itemize}
+	\item STOP[0x827D]\\Der ARM stoppt die Aufzeichnung, speichert die aktuelle Schreibposition auf der SD-Karte und wechselt dann in den Idle-Modus. Die übrigen 15 Bytes sind ohne ohne Bedeutung, müssen aber mitgeschickt werden.
+	\item DATA [0xC03F]\\Dieser Befehl übergibt dem ARM die 15 Byte an Sensor-Daten des PICs, die für die laufende Sekunde mit abgespeichert werden soll. Die übrigen 15 Bytes beinhalten also die Sensor-Daten des PICs.
+\end{itemize}	
+
+\subsection{1 Byte Kommandos im Pipe Mode (ARM $\rightarrow$ PIC)}
+Jede Sekunde sendet der ARM 1Byte [0x5A] an den PIC zu zum Zweck der Synchronisation. Der PIC sendet nach dem Empfang des Alive-Bytes das nächste 17-Byte Kommando.
+
+\section{USB Kommunikation zwischen PC \& PIC }
+Wenn der ARM sich im IDLE-Modus befindet, kann der Molch jeder Zeit über die USB-Schnittstelle mit einem PC verbunden werden. Die Daten der SD-Karte werden als Massenspeicher zur Verfügung gestellt. Soll darüberhinaus mit vom PC mit dem PIC kommuniziert werden, wird folgendes Protokol mit festen Nachrichtenlängen verwendet.\\
+\begin{itemize}
+	\item Nachrichtenlänge PC $\rightarrow$ PIC (Anfrage): 2Byte CMD + 30Byte Daten, 32 Bytes
+  \item Nachrichtenlänge PIC $\rightarrow$ PIC (Antwort): 2Byte CMD + 128Byte	Daten, 130 Bytes
+\end{itemize}
+Wenn der PC mit dem PIC kommunzieren möchte schickt er ein 32 Byte Kommando über USB zum ARM. Der Arm leitet des Paket uninterpretiert an den PIC weiter und wechselt in den USB-Mode. Der PIC antwortet indem er eine 130 Byte Antwort an den ARM zurückschickt. Das 2Byte Kommandofeld in der Antwort ist ein Echo des gleichen Feldes in der Anfrage. In den übrigen 128 Byte wird die Antwort des PICs verpackt, nicht benötigte Bytes werden auf [0xDD] (Dummy) gesetzt. Nach dem Empfang der Antwort vom PIC und der Weiterleitung zum PC wechselt der ARM zurück in den Idle-Modus.
+\subsection{Anfragen des PCs}
+\begin{enumerate}
+	\item Get\_codemld:	
+   \begin{itemize}
+	  \item 2Byte Anfrage CMD: [0x00FF]
+	  \item 30 Byte Anfrage: Dummys [0xDD]
+	  \item 2 Byte Antwort CMD: [0x00FF]
+	  \item 128 Byte Antwort: Gerätenr, Pgr.-Version, etc, + Dummys [0xDD]
+  \end{itemize}
+  
+  	\item Get\_rampic:	
+   \begin{itemize}
+	  \item 2Byte Anfrage CMD: [0x05FA]
+	  \item 30 Byte Anfrage: Dummys [0xDD]
+	  \item 2 Byte Antwort CMD: [0x05FA]
+	  \item 128 Byte Antwort: 128Byte RAM-Inhalt des PICs
+  \end{itemize}
+  
+    \item Set\_parameter:	
+   \begin{itemize}
+	  \item 2Byte Anfrage CMD: [0x0AF5]
+	  \item 30 Byte Anfrage: 30 Byte Parameterisierungs Daten
+	  \item 2 Byte Antwort CMD: [0x0AF5]
+	  \item 128 Byte Antwort: 30 Byte Echo der Parametrisierungs Daten + Dummys [0xDD]
+  \end{itemize}
+  
+     \item Set\_ckpipe:	
+   \begin{itemize}
+	  \item 2Byte Anfrage CMD: [0x10EF]
+	  \item 30 Byte Anfrage: Dummys [0xDD]
+	  \item 2 Byte Antwort CMD: [0x10EF]
+	  \item 128 Byte Antwort: Dummys[0xDD] oder NAK/ACK Meldung des PICs bei fehlerhaften unvollständigen Parametern (noch zu Klären!)
+  \end{itemize}
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

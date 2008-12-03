@@ -1,0 +1,49 @@
+# Project: Test Prog
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = arm-elf-g++.exe
+CC   = arm-elf-gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = obj/main.o obj/Cstartup.o obj/Cstartup_SAM7.o obj/isrsupport.o obj/serielle.o obj/rprintf.o obj/test.o $(RES)
+LINKOBJ  = obj/main.o obj/Cstartup.o obj/Cstartup_SAM7.o obj/isrsupport.o obj/serielle.o obj/rprintf.o obj/test.o $(RES)
+LIBS =  -L"C:/Program Files/yagarto/lib/gcc/arm-elf/4.3.2" -L"C:/Program Files/yagarto/arm-elf/lib" -Tcommon/linking/mem.ld -lm -lc -lgcc -nostartfiles -g3 -nostdlib  
+INCS =  -I"C:/Program Files/yagarto/arm-elf/include"  -I"C:/Program Files/yagarto/include"  -I"common/"  -I"common/lowlevel/"  -I"src/serialcom/" 
+CXXINCS =  -I"C:/Program Files/yagarto/include"  -I"common/"  -I"common/lowlevel/"  -I"src/serialcom/" 
+BIN  = bin/test.elf
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS) -ggdb -O0 -mcpu=arm7tdmi -ffast-math  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before bin/test.elf all-after
+
+include common/linking/makefile.inc
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "bin\test.elf" $(LIBS)
+
+obj/main.o: src/main.c
+	$(CC) -c src/main.c -o obj/main.o $(CFLAGS)
+
+obj/Cstartup.o: common/lowlevel/Cstartup.S
+	$(CC) -c common/lowlevel/Cstartup.S -o obj/Cstartup.o $(CFLAGS)
+
+obj/Cstartup_SAM7.o: common/lowlevel/Cstartup_SAM7.c
+	$(CC) -c common/lowlevel/Cstartup_SAM7.c -o obj/Cstartup_SAM7.o $(CFLAGS)
+
+obj/isrsupport.o: common/lowlevel/isrsupport.c
+	$(CC) -c common/lowlevel/isrsupport.c -o obj/isrsupport.o $(CFLAGS)
+
+obj/serielle.o: src/serialcom/serielle.c
+	$(CC) -c src/serialcom/serielle.c -o obj/serielle.o $(CFLAGS)
+
+obj/rprintf.o: src/serialcom/rprintf.c
+	$(CC) -c src/serialcom/rprintf.c -o obj/rprintf.o $(CFLAGS)
+
+obj/test.o: src/test.c
+	$(CC) -c src/test.c -o obj/test.o $(CFLAGS)
